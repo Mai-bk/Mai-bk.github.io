@@ -1,4 +1,26 @@
-$(function () {
+document.onkeydown = function () {
+    if (window.event && window.event.keyCode == 123) {
+        alert("大佬别扒了");
+        event.keyCode = 0;
+        event.returnValue = false;
+    }
+}
+
+exe_all_fn()
+
+function exe_all_fn() {
+
+    /*监听滚动条位置*/
+    let $nav = $('#headNav');
+    let $backTop = $('.top-scroll');
+// 当页面处于文章中部的时候刷新页面，因为此时无滚动，所以需要判断位置,给导航加上绿色。
+    showOrHideNavBg($(window).scrollTop());
+    $(window).scroll(function () {
+        /* 回到顶部按钮根据滚动条的位置的显示和隐藏.*/
+        let scroll = $(window).scrollTop();
+        showOrHideNavBg(scroll);
+    });
+
     /**
      * 添加文章卡片hover效果.
      */
@@ -12,8 +34,7 @@ $(function () {
     };
     articleCardHover();
 
-    /*菜单切换*/
-    $('.sidenav').sidenav();
+
 
     /* 修复文章卡片 div 的宽度. */
     let fixPostCardWidth = function (srcId, targetId) {
@@ -57,10 +78,7 @@ $(function () {
         fixStyles();
     });
 
-    /*初始化瀑布流布局*/
-    $('#articles').masonry({
-        itemSelector: '.article'
-    });
+
 
     AOS.init({
         easing: 'ease-in-out-sine',
@@ -100,11 +118,7 @@ $(function () {
                 this.insertAdjacentElement('afterend', captionDiv)
             }
         });
-        $('#articleContent, #myGallery').lightGallery({
-            selector: '.img-item',
-            // 启用字幕
-            subHtmlSelectorRelative: true
-        });
+
 
         // progress bar init
         const progressElement = window.document.querySelector('.progress-bar');
@@ -116,24 +130,6 @@ $(function () {
     };
     articleInit();
 
-    $('.modal').modal();
-
-    /*回到顶部*/
-    $('#backTop').click(function () {
-        $('body,html').animate({scrollTop: 0}, 400);
-        return false;
-    });
-
-    /*监听滚动条位置*/
-    let $nav = $('#headNav');
-    let $backTop = $('.top-scroll');
-    // 当页面处于文章中部的时候刷新页面，因为此时无滚动，所以需要判断位置,给导航加上绿色。
-    showOrHideNavBg($(window).scrollTop());
-    $(window).scroll(function () {
-        /* 回到顶部按钮根据滚动条的位置的显示和隐藏.*/
-        let scroll = $(window).scrollTop();
-        showOrHideNavBg(scroll);
-    });
 
     function showOrHideNavBg(position) {
         let showPosition = 100;
@@ -146,27 +142,102 @@ $(function () {
         }
     }
 
-    	
-	$(".nav-menu>li").hover(function(){
-		$(this).children('ul').stop(true,true).show();
-		 $(this).addClass('nav-show').siblings('li').removeClass('nav-show');
-		
-	},function(){
-		$(this).children('ul').stop(true,true).hide();
-		$('.nav-item.nav-show').removeClass('nav-show');
-	})
-	
-    $('.m-nav-item>a').on('click',function(){
-            if ($(this).next('ul').css('display') == "none") {
-                $('.m-nav-item').children('ul').slideUp(300);
-                $(this).next('ul').slideDown(100);
-                $(this).parent('li').addClass('m-nav-show').siblings('li').removeClass('m-nav-show');
-            }else{
-                $(this).next('ul').slideUp(100);
-                $('.m-nav-item.m-nav-show').removeClass('m-nav-show');
-            }
+}
+
+$(function () {
+
+    $(".nav-menu>li").hover(function () {
+        $(this).children('ul').stop(true, true).show();
+        $(this).addClass('nav-show').siblings('li').removeClass('nav-show');
+
+    }, function () {
+        $(this).children('ul').stop(true, true).hide();
+        $('.nav-item.nav-show').removeClass('nav-show');
+    })
+
+    $('.m-nav-item>a').on('click', function () {
+        if ($(this).next('ul').css('display') == "none") {
+            $('.m-nav-item').children('ul').slideUp(300);
+            $(this).next('ul').slideDown(100);
+            $(this).parent('li').addClass('m-nav-show').siblings('li').removeClass('m-nav-show');
+        } else {
+            $(this).next('ul').slideUp(100);
+            $('.m-nav-item.m-nav-show').removeClass('m-nav-show');
+        }
     });
 
-    // 初始化加载 tooltipped.
+    $('.modal').modal();
+
     $('.tooltipped').tooltip();
+
+
+    $('#articleContent, #myGallery').lightGallery({
+        selector: '.img-item',
+        // 启用字幕
+        subHtmlSelectorRelative: true
+    });
+    /*初始化瀑布流布局*/
+    $('#articles').masonry({
+        itemSelector: '.article'
+    });
+    /*菜单切换*/
+    $('.sidenav').sidenav();
+    /*回到顶部*/
+    $('#backTop').click(function () {
+        $('body,html').animate({scrollTop: 0}, 400);
+        return false;
+    });
+});
+
+// 深色模式设置
+function switchNightMode() {
+    var body = document.body;
+    if (body.classList.contains('dark')) {
+        document.body.classList.remove('dark');
+        localStorage.setItem('dark', '0');
+        $('#nightMode').removeClass("fa-lightbulb-o").addClass("fa-moon-o");
+        return;
+    } else {
+        document.body.classList.add('dark');
+        localStorage.setItem('dark', '1');
+        $('#nightMode').removeClass("fa-moon-o").addClass("fa-lightbulb");
+        return;
+    }
+}
+
+// 网站主题切换模式开始
+if (localStorage.getItem('themespring') === '1') {
+    document.body.classList.add('themespring');
+} else if (matchMedia('(prefers-color-scheme: themespring)').matches) {
+    document.body.classList.add('themespring');
+}
+
+function switchThemes() {
+    var body = document.body;
+    if (body.classList.contains('themespring')) {
+        document.body.classList.remove('themespring');
+        localStorage.setItem('themespring', '0');
+        return;
+    } else {
+        document.body.classList.add('themespring');
+        localStorage.setItem('themespring', '1');
+        return;
+    }
+}; // 网站主题切换模式结束
+
+//浏览器搞笑标题
+var OriginTitle = document.title;
+var titleTime;
+document.addEventListener('visibilitychange', function () {
+    if (document.hidden) {
+        $('[rel="icon"]').attr('href', "https://pic.downk.cc/item/5fbd2ad6b18d6271135414f9.png");
+        document.title = '我相信你还会回来的!';
+        clearTimeout(titleTime);
+    } else {
+        $('[rel="icon"]').attr('href', "https://pic.downk.cc/item/5fbd2ad6b18d6271135414f9.png");
+        document.title = '哈哈,我就知道！';
+        titleTime = setTimeout(function () {
+            document.title = OriginTitle;
+        }, 2000);
+    }
 });

@@ -1,31 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Mai-boke</title>
+  <title>Mai-boko</title>
   
   <subtitle>Mai</subtitle>
-  <link href="https://mai-bk.github.io/atom.xml" rel="self"/>
+  <link href="https://mai-bk.com/atom.xml" rel="self"/>
   
-  <link href="https://mai-bk.github.io/"/>
-  <updated>2024-07-26T07:58:24.988Z</updated>
-  <id>https://mai-bk.github.io/</id>
+  <link href="https://mai-bk.com/"/>
+  <updated>2024-07-31T12:51:22.934Z</updated>
+  <id>https://mai-bk.com/</id>
   
   <author>
-    <name>Mai</name>
+    <name>Ming xin</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>测试文章</title>
-    <link href="https://mai-bk.github.io/2024/07/25/index/"/>
-    <id>https://mai-bk.github.io/2024/07/25/index/</id>
-    <published>2024-07-25T07:02:19.000Z</published>
-    <updated>2024-07-26T07:58:24.988Z</updated>
+    <title>QT环境配置</title>
+    <link href="https://mai-bk.com/2020/05/06/1/"/>
+    <id>https://mai-bk.com/2020/05/06/1/</id>
+    <published>2020-05-05T16:00:00.000Z</published>
+    <updated>2024-07-31T12:51:22.934Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;一、下载QT源码&quot;&gt;&lt;a href=&quot;#一、下载QT源码&quot; class=&quot;headerlink&quot; title=&quot;一、下载QT源码&quot;&gt;&lt;/a&gt;一、下载QT源码&lt;/h2&gt;&lt;p&gt;QT各源码下载地址：&lt;a</summary>
+        
+      
     
     
     
     
+    <category term="-ARM开发板" scheme="https://mai-bk.com/tags/ARM%E5%BC%80%E5%8F%91%E6%9D%BF/"/>
     
   </entry>
   
