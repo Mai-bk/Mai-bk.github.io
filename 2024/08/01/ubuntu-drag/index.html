@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="解决ubuntu的网络问题, Mai">
+    <meta name="keywords" content="解决ubuntu20以上无法拖拽复制粘贴问题, Mai">
     <meta name="description" content="一个分享快乐的网站！">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>解决ubuntu的网络问题 | Mai-boko</title>
+    <title>解决ubuntu20以上无法拖拽复制粘贴问题 | Mai-boko</title>
     <link rel="icon" type="image/png" href="/medias/logo.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -1040,7 +1040,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">解决ubuntu的网络问题</h1>
+                    <h1 class="description center-align post-title">解决ubuntu20以上无法拖拽复制粘贴问题</h1>
                 </div>
             </div>
         </div>
@@ -1210,7 +1210,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    294
+                    73
                 </div>
                 
 
@@ -1233,26 +1233,16 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="网络修复指南"><a href="#网络修复指南" class="headerlink" title="网络修复指南"></a>网络修复指南</h1><p>该方法可以解决99%的网络问题！！！！</p>
-<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ol>
-<li><p><strong>禁用 NetworkManager 服务</strong>：<br>首先，我们禁用 NetworkManager 服务以防止它自动管理网络连接。</p>
-<pre><code class="highlight bash"><span class="built_in">sudo</span> systemctl <span class="built_in">disable</span> NetworkManager</code></pre></li>
-<li><p><strong>停止 NetworkManager 服务</strong>： 然后，我们停止 NetworkManager 服务。</p>
-<pre><code class="highlight plaintext">sudo systemctl stop NetworkManager.service</code></pre></li>
-<li><p><strong>重启 network 服务</strong> ：<br>接下来，我们重启 network 服务来重新配置网络接口。</p>
-<pre><code class="highlight plaintext">sudo systemctl restart network</code></pre></li>
-<li><p><strong>停止 network 服务</strong>： 我们也可以选择停止 network 服务，以防止冲突。</p>
-<pre><code class="highlight plaintext">sudo systemctl stop network</code></pre></li>
-<li><p><strong>禁用 network 服务</strong>： 禁用 network 服务，确保它不会在启动时自动运行。</p>
-<pre><code class="highlight plaintext">sudo systemctl disable network</code></pre></li>
-<li><p><strong>启用 NetworkManager 服务</strong>： 重新启用 NetworkManager 服务，使其可以管理网络连接。</p>
-<pre><code class="highlight plaintext">sudo systemctl enable NetworkManager.service</code></pre></li>
-<li><p><strong>启动 NetworkManager 服务</strong>： 启动 NetworkManager 服务。</p>
-<pre><code class="highlight plaintext">sudo systemctl start NetworkManager.service</code></pre></li>
-<li><p><strong>开启网络连接</strong>： 使用 nmcli 命令开启网络连接</p>
-<pre><code class="highlight plaintext">nmcli networking on</code></pre></li>
-</ol>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>通过以上步骤，我们可以有效地解决大多数网络连接问题。这些步骤包括管理和切换不同的网络服务，以确保网络配置正确应用。如果仍然遇到问题，可以进一步检查网络配置文件和硬件连接。</p>
+                <p>首先安装<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=VMware&spm=1001.2101.3001.7020">VMware</a> Tools：</p>
+<pre><code class="highlight plaintext">sudo apt install open-vm-tools
+sudo apt install open-vm-tools-dev
+sudo apt install open-vm-tools-desktop
+</code></pre>
+
+<p>新版ubuntu默认启用了窗口系统Wayland不是原来的x11所以需要禁用Wayland</p>
+<pre><code class="highlight plaintext">sudo vim /etc/gdm3/custom.conf</code></pre>
+
+<p>找到 <code>#WaylandEnable=false</code>删除前面的#号保存退出重启即可</p>
 
             </div>
             <hr/>
@@ -1268,7 +1258,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://mai-bk.com" rel="external nofollow noreferrer">Ming xin</a>
+                    <a href="https://mai-bk.com" rel="external nofollow noreferrer">Mai</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -1278,7 +1268,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://mai-bk.com/2024/08/01/2/">https://mai-bk.com/2024/08/01/2/</a>
+                    <a href="https://mai-bk.com/2024/08/01/ubuntu-drag/">https://mai-bk.com/2024/08/01/ubuntu-drag/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1291,7 +1281,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="https://mai-bk.com" target="_blank">Ming xin</a>
+                    <a href="https://mai-bk.com" target="_blank">Mai</a>
                     !
                 </span>
             </div>
@@ -1362,7 +1352,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2024/08/01/1/">
+                <a href="/2024/08/01/qt-arm/">
                     <div class="card-image">
                         
                         <img src="https://pic.downk.cc/item/5ec92e6ec2a9a83be54d38cd" class="responsive-img" alt="QT环境配置">
@@ -1413,15 +1403,20 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2024/08/01/2/">
+                <a href="/2024/08/01/ubuntu-net/">
                     <div class="card-image">
                         
                         <img src="https://pic.downk.cc/item/5ec92e6ec2a9a83be54d38cd" class="responsive-img" alt="解决ubuntu的网络问题">
                         
-                       
+                        <!-- 春节主题 小挂件 -->
+                        <div class="caishendeng"> 
+                            <div class="caishenxian">
+                                <!-- <img class="caishenpic lala" src="https://nekodeng.gitee.io/medias/spring-img/fudao.png">  -->
+                            </div> 
+                        </div>
                         <span class="card-title">解决ubuntu的网络问题</span>
                     </div>
                 </a>
@@ -1447,7 +1442,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1496,7 +1490,7 @@
         var url = document.location.href;
         newdiv.innerHTML += '<br />'
             + '来源: Mai-boko<br />'
-            + '文章作者: Ming xin<br />'
+            + '文章作者: Mai<br />'
             + '文章链接: <a href="' + url + '">' + url + '</a><br />'
             + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
 
@@ -1701,14 +1695,14 @@
 
             Copyright&nbsp;&copy;
             <span id="year">2020</span>
-            <a href="/about" target="_blank">Ming xin</a>
+            <a href="/about" target="_blank">Mai</a>
             &nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             &nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
             
             &nbsp;<i class="far"></i>&nbsp;Total number of words: &nbsp;<span
-                class="white-color">965</span>&nbsp;
+                class="white-color">1k</span>&nbsp;
             
             
             

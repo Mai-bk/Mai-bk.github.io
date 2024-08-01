@@ -10,7 +10,7 @@
   <id>https://mai-bk.com/</id>
   
   <author>
-    <name>Ming xin</name>
+    <name>Mai</name>
     
   </author>
   
@@ -18,8 +18,8 @@
   
   <entry>
     <title>QT环境配置</title>
-    <link href="https://mai-bk.com/2024/08/01/1/"/>
-    <id>https://mai-bk.com/2024/08/01/1/</id>
+    <link href="https://mai-bk.com/2024/08/01/qt-arm/"/>
+    <id>https://mai-bk.com/2024/08/01/qt-arm/</id>
     <published>2024-08-01T06:16:11.000Z</published>
     <updated>2024-08-01T06:16:22.385Z</updated>
     
@@ -42,11 +42,37 @@
   </entry>
   
   <entry>
-    <title>解决ubuntu的网络问题</title>
-    <link href="https://mai-bk.com/2024/08/01/2/"/>
-    <id>https://mai-bk.com/2024/08/01/2/</id>
+    <title>解决ubuntu20以上无法拖拽复制粘贴问题</title>
+    <link href="https://mai-bk.com/2024/08/01/ubuntu-drag/"/>
+    <id>https://mai-bk.com/2024/08/01/ubuntu-drag/</id>
     <published>2024-08-01T06:16:11.000Z</published>
-    <updated>2024-08-01T06:16:14.951Z</updated>
+    <updated>2024-08-01T06:45:09.534Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;首先安装&lt;a href=&quot;https://so.csdn.net/so/search?q=VMware&amp;spm=1001.2101.3001.7020&quot;&gt;VMware&lt;/a&gt; Tools：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    <category term="Mai" scheme="https://mai-bk.com/categories/Mai/"/>
+    
+    
+    <category term="ubuntu" scheme="https://mai-bk.com/tags/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决ubuntu的网络问题</title>
+    <link href="https://mai-bk.com/2024/08/01/ubuntu-net/"/>
+    <id>https://mai-bk.com/2024/08/01/ubuntu-net/</id>
+    <published>2024-08-01T06:16:11.000Z</published>
+    <updated>2024-08-01T06:32:33.610Z</updated>
     
     
       
