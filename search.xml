@@ -11,10 +11,41 @@
         <content type="html"><![CDATA[<h2 id="一、下载QT源码"><a href="#一、下载QT源码" class="headerlink" title="一、下载QT源码"></a>一、下载QT源码</h2><p>QT各源码下载地址：<a href="http://download.qt.io/archive/qt/">http://download.qt.io/archive/qt/</a> (我这里下载的QT5.12.5)</p><h2 id="二、编译源码"><a href="#二、编译源码" class="headerlink" title="二、编译源码"></a>二、编译源码</h2><p><strong>打开虚拟机解压qt源码并进入qt目录</strong></p><p>tar -xvJf qt-everywhere-src-5.12.5.tar.xz<br>cd qt-everywhere-src-5.12.5</p><p><strong>配置编译模块 我这边是写成了一个脚本a.sh 内容如下：</strong></p><pre><code class="highlight plaintext">QT_INSTALL_DIR=/opt/tool/arm-linux-gcc5.31/CROSS_COMPILE=/opt/tool/arm-linux-gcc5.31/bin/arm-linux-gnueabi-gccSYSROOT_DIR=/opt/tool/arm-linux-gcc5.31/sysroot./configure \    -opensource \    -confirm-license \    -extprefix $QT_INSTALL_DIR \    -sysroot $SYSROOT_DIR \    -xplatform linux-arm-gnueabi-g++ \    -device-option CROSS_COMPILE=$CROSS_COMPILE \    -R /usr/lib \    -no-strip \    -c++std c++11 \    -shared \    -nomake examples \    -accessibility \    -no-sql-db2 \    -no-sql-ibase \    -no-sql-mysql \    -no-sql-oci \    -no-sql-odbc \    -no-sql-psql \    -no-sql-sqlite2 \    -no-sql-tds \    -no-sql-sqlite \    -plugin-sql-sqlite \    -no-sse2 \    -no-sse3 \    -no-ssse3 \    -no-sse4.1 \    -no-sse4.2 \    -no-avx \    -no-avx2 \    -no-mips_dsp \    -no-mips_dspr2 \    -qt-zlib \    -no-journald \    -qt-libpng \    -qt-libjpeg \    -qt-freetype \    -qt-harfbuzz \    -no-openssl \    -no-xcb-xlib \    -no-glib \    -no-pulseaudio \    -alsa \    -gui \    -widgets \    -v \    -optimized-qmake \    -no-cups \    -no-iconv \    -evdev \    -no-icu \    -no-fontconfig \    -no-strip \    -pch \    -dbus \    -no-use-gold-linker \    -no-directfb \    -no-eglfs \    -linuxfb \    -no-kms \    -no-opengl \    -no-vulkan \    -no-system-proxies \    -no-slog2 \    -no-pps \    -no-imf \    -no-lgmon \    -tslib \    -skip qt3d \    -skip qtwebengine \    -skip qtwebview \    -skip qtx11extras \    -nomake tests \    -nomake tools</code></pre><p><strong>这里的QT_INSTALL_DIR是安装目录  CROSS_COMPILE是指定编译器 SYSROOT_DIR是开发板文件系统的sysroot（这里我把安装目录跟交叉编译器放在一个路径）</strong></p><p><strong>这里跳过了    -skip qt3d \    -skip qtwebengine \      -skip qtwebview \    -skip qtx11extras \这几个模块 需要的话删除即可</strong></p><p><strong>给脚本权限并执行脚本</strong></p><pre><code class="highlight plaintext">chmod 777 a.sh &amp;&amp; ./a.sh</code></pre><p><strong>配置完毕执行 等待系统编译完 编译速度取决于电脑配置</strong></p><pre><code class="highlight plaintext">make -j16 &amp;&amp; sudo make install</code></pre><hr><p>**编译完成后可以看到安装路径下多出来了qt的库  **</p><p><strong>执行一下</strong></p><pre><code class="highlight plaintext">qmake -v</code></pre><p><strong>现在我们就构建成功了qt5.12.5+交叉编译器了</strong></p><h2 id="三、把QT环境移植到arm开发板"><a href="#三、把QT环境移植到arm开发板" class="headerlink" title="三、把QT环境移植到arm开发板"></a>三、把QT环境移植到arm开发板</h2><p><strong>由于我这边是分开构建的 你们可以再configure的时候不要跟交叉编译器放在一个目录 另外指定个Qt_5.12目录</strong></p><p><strong>编译完成后就会的到Qt_5.12.5的库了</strong></p><p>接着我们把Qt_5.12.5目录拷贝在开发板上面 我这边放在了&#x2F;usr&#x2F;local&#x2F;目录下</p><p>然后用个脚本qt_env.sh配置环境变量 内容如下</p><pre><code class="highlight plaintext">export  QTDIR=/usr/local/Qt_5.12.5if [ -d $QTDIR ];then        export  QT_ROOT=$QTDIR        export  PATH=$QTDIR/bin:$PATH        export  LD_LIBRARY_PATH=$QTDIR/lib:/usr/lib/cedarx/:$LD_LIBRARY_PATH        export QT_QPA_PLATFORM_PLUGIN_PATH=$QT_ROOT/plugins        export QT_QPA_PLATFORM=linuxfb:tty=/dev/fb0        export QT_QPA_FONTDIR=$QT_ROOT/fonts        export QML2_IMPORT_PATH=/usr/local/Qt_5.12.5/qml        export QML2_PACKAGE_PATH=/usr/local/Qt_5.12.5/qml        export QT_QPA_PLATFORM=linuxfb        #export QT_QPA_EGLFS_INTEGRATION=eglfs_mali        #export QT_QPA_FB_HIDECURSOR=1        #export QT_QPA_EGLFS_HIDECURSOR=1        #export QT_QPA_EGLFS_ROTATION=90        export QWS_MOUSE_PROTO=        #export DBUS_SESSION_BUS_ADDRESS=`cat /tmp/dbusaddr`        mkdir -p /dev/shm        ulimit -c unlimited        echo &quot;find qt5 installed done&quot;fi</code></pre><p>设置一下环境变量</p><pre><code class="highlight plaintext">source /qt_env.sh</code></pre><p>再运行程序即可</p>]]></content>
       
       
+      <categories>
+          
+          <category> Mai </category>
+          
+      </categories>
+      
       
         <tags>
             
-            <tag> -ARM开发板 </tag>
+            <tag> ARM开发板 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>解决ubuntu的网络问题</title>
+      <link href="/2020/05/06/2/"/>
+      <url>/2020/05/06/2/</url>
+      
+        <content type="html"><![CDATA[<h1 id="网络修复指南"><a href="#网络修复指南" class="headerlink" title="网络修复指南"></a>网络修复指南</h1><p>该方法可以解决99%的网络问题！！！！</p><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ol><li><p><strong>禁用 NetworkManager 服务</strong>：<br>首先，我们禁用 NetworkManager 服务以防止它自动管理网络连接。</p><pre><code class="highlight bash"><span class="built_in">sudo</span> systemctl <span class="built_in">disable</span> NetworkManager</code></pre></li><li><p><strong>停止 NetworkManager 服务</strong>： 然后，我们停止 NetworkManager 服务。</p><pre><code class="highlight plaintext">sudo systemctl stop NetworkManager.service</code></pre></li><li><p><strong>重启 network 服务</strong> ：<br>接下来，我们重启 network 服务来重新配置网络接口。</p><pre><code class="highlight plaintext">sudo systemctl restart network</code></pre></li><li><p><strong>停止 network 服务</strong>： 我们也可以选择停止 network 服务，以防止冲突。</p><pre><code class="highlight plaintext">sudo systemctl stop network</code></pre></li><li><p><strong>禁用 network 服务</strong>： 禁用 network 服务，确保它不会在启动时自动运行。</p><pre><code class="highlight plaintext">sudo systemctl disable network</code></pre></li><li><p><strong>启用 NetworkManager 服务</strong>： 重新启用 NetworkManager 服务，使其可以管理网络连接。</p><pre><code class="highlight plaintext">sudo systemctl enable NetworkManager.service</code></pre></li><li><p><strong>启动 NetworkManager 服务</strong>： 启动 NetworkManager 服务。</p><pre><code class="highlight plaintext">sudo systemctl start NetworkManager.service</code></pre></li><li><p><strong>开启网络连接</strong>： 使用 nmcli 命令开启网络连接</p><pre><code class="highlight plaintext">nmcli networking on</code></pre></li></ol><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>通过以上步骤，我们可以有效地解决大多数网络连接问题。这些步骤包括管理和切换不同的网络服务，以确保网络配置正确应用。如果仍然遇到问题，可以进一步检查网络配置文件和硬件连接。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Mai </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ubuntu </tag>
             
         </tags>
       
