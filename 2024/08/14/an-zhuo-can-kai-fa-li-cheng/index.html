@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="contact, Mai">
+    <meta name="keywords" content="安卓can开发, Mai">
     <meta name="description" content="一个分享快乐的网站！">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>contact | Mai-boko</title>
+    <title>安卓can开发 | Mai-boko</title>
     <link rel="icon" type="image/png" href="/medias/logo.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -1018,292 +1018,850 @@
 </header>
 
 <main id="main_wrap">
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                    Mai
-                
-            </div>
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
 
-            <div class="description center-align">
-                
-                    <span id="jinrishici-sentence">花径不曾缘客扫，蓬门今始为君开。</span>
-                
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">安卓can开发</h1>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 
-    <script>
-        // 每天切换 banner 图.  Switch banner image every day.
-        function loadBanner() {
-            $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
-        }
-        loadBanner()
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    .toc-fixed .toc-link::before {
+        position: fixed !important; /*当toc的位置改为fixed时，.toc-link::before也要改为fixed*/
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 255px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 45px;
+        height: 45px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <!-- 春节主题 小挂件 -->
+        <div class="caishendeng"> 
+            <div class="caishenxian">
+                <!-- <img class="caishenpic lala" src="https://nekodeng.gitee.io/medias/spring-img/fudao.png">  -->
+            </div> 
+        </div>
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2024-08-14
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2024-08-14
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    1.5k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    7 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Android-CAN-应用开发"><a href="#Android-CAN-应用开发" class="headerlink" title="Android CAN 应用开发"></a>Android CAN 应用开发</h1><p>在工作时发现我们很多客户对于Android can应用开发没有一点头绪，下面我通过一个简单项目来实现一个can通信demo。</p>
+<h2 id="开发准备"><a href="#开发准备" class="headerlink" title="开发准备"></a>开发准备</h2><p><strong>确保开发板硬件上有can节点存在，并且确保通信正常 验证方法如下：</strong></p>
+<h3 id="一-、使用cantool验证"><a href="#一-、使用cantool验证" class="headerlink" title="一 、使用cantool验证"></a>一 、使用cantool验证</h3><h5 id="1-1初始化并设置波特率"><a href="#1-1初始化并设置波特率" class="headerlink" title="1.1初始化并设置波特率"></a>1.1初始化并设置波特率</h5><pre><code class="highlight plaintext">
+ifconfig can0 down
+
+canconfig can0 bitrate 500000 ctrlmode triple-sampling on //默认使用这个初始化
+
+#ip link set can0 type can bitrate 250000 sample-point 0.8 dbitrate 250000 dsample-point 0.75 fd on //有些厂商用的这个初始化
+
+ifconfig can0 up
+</code></pre>
+
+<h5 id="1-2-发送数据and接收数据"><a href="#1-2-发送数据and接收数据" class="headerlink" title="1.2 发送数据and接收数据"></a>1.2 发送数据and接收数据</h5><pre><code class="highlight plaintext">cansend can0 -e 0x11 0x22 0x33 0x44 0x55 0x66 0x77 0x88
+candump can0</code></pre>
+
+<p><strong>确保上面步骤可以正常进行通信</strong></p>
+<h3 id="二、实现Android-的jni方法"><a href="#二、实现Android-的jni方法" class="headerlink" title="二、实现Android 的jni方法"></a>二、实现Android 的jni方法</h3><p>首先新建一个工程 根据自己工程默认即可 语言选择java</p>
+<h5 id="2-1-添加C-模块"><a href="#2-1-添加C-模块" class="headerlink" title="2.1 添加C++模块"></a>2.1 添加C++模块</h5><p>工程创建完毕选择app右键选择 <code>Add C++ to Module</code> 创建路径和文件名称自主修改即可</p>
+<p><img src="/2024/08/14/an-zhuo-can-kai-fa-li-cheng/1723617138938.jpg" alt="图片"></p>
+<p>创建完毕会出现一个cpp文件夹 里面会有一个cmakelists和刚刚创建的文件</p>
+<p><img src="/2024/08/14/an-zhuo-can-kai-fa-li-cheng/1723617188855.jpg" alt="图片"></p>
+<h5 id="2-2-添加java方法"><a href="#2-2-添加java方法" class="headerlink" title="2.2 添加java方法"></a>2.2 添加java方法</h5><p>接下来我们创建两个java类 一个名字为 <code>CanFrame</code> 一个名字为 <code>CanControl</code></p>
+<p><img src="/2024/08/14/an-zhuo-can-kai-fa-li-cheng/1723617253869.jpg" alt="图片"></p>
+<p><strong>CanFrame.java内容为：</strong></p>
+<pre><code class="highlight plaintext">public class CanFrame &#123;
+    public  int can_id;
+    public  char can_dlc;
+    public byte[] data;
+&#125;</code></pre>
+
+<p><strong>CanControl.java内容为：</strong>public class CanControl {</p>
+<pre><code class="highlight plaintext">    static &#123;
+        System.loadLibrary(&quot;myapplication&quot;); //注意这里的库名字为你刚刚创建的C++名称
+    &#125;
+
+
+    public int fd;
+
+    public native static  int OpenCan(String canx);
+    public native static  int CanWrite(int fd,int canId, byte[] data);
+    public native static CanFrame CanRead(CanFrame mcanFrame, int time);
+    public native static  int CloseCan(int fd);
+
+&#125;</code></pre>
+
+<h5 id="2-3-接下来我们来实现CanControl里面的方法"><a href="#2-3-接下来我们来实现CanControl里面的方法" class="headerlink" title="2.3 接下来我们来实现CanControl里面的方法"></a>2.3 接下来我们来实现CanControl里面的方法</h5><p>点击CanControl.java里面的方法 比如   <strong>OpenCan;</strong></p>
+<p> 鼠标移动过去会有一个Create JNl function for CanRead的提示 点击即可 其他的也是一样</p>
+<p><img src="/2024/08/14/an-zhuo-can-kai-fa-li-cheng/1723615609265.jpg" alt="图片"></p>
+<p>都创建完了 我们来到cpp文件 可以看到编译器给我们添加了几个方法</p>
+<p><img src="/2024/08/14/an-zhuo-can-kai-fa-li-cheng/1723617003064.jpg" alt="图片"></p>
+<p>接着我们自己来实现一下 我这里已经实现了 不想写的直接复制粘贴即可</p>
+<pre><code class="highlight plaintext">extern &quot;C&quot;
+JNIEXPORT jint JNICALL
+Java_com_example_myapplication_CanControl_OpenCan(JNIEnv *env, jclass clazz, jstring canx) &#123;
+        int fd;
+    struct ifreq ifr;
+    struct sockaddr_can addr;
+
+    /* open socket */
+    if ((fd = socket(PF_CAN, SOCK_RAW, CAN_RAW)) &lt; 0) &#123;
+        return -1;
+    &#125;
+
+    const char *str = env-&gt;GetStringUTFChars(canx, 0);
+    strcpy(ifr.ifr_name, str);
+    ioctl(fd, SIOCGIFINDEX, &amp;ifr);
+
+    memset(&amp;addr, 0, sizeof(addr));
+    addr.can_family = AF_CAN;
+    addr.can_ifindex = ifr.ifr_ifindex;
+
+    if (bind(fd, (struct sockaddr *)&amp;addr, sizeof(addr)) &lt; 0) &#123;
+        return -2;
+    &#125;
+
+    return fd;
+&#125;
+extern &quot;C&quot;
+JNIEXPORT jint JNICALL
+Java_com_example_myapplication_CanControl_CanWrite(JNIEnv *env, jclass clazz, jint fd,
+                                                   jint can_id, jbyteArray data) &#123;
+    // 获取 JNI 数据
+    jbyte *pdata = env-&gt;GetByteArrayElements(data, NULL);
+    jsize data_len = env-&gt;GetArrayLength(data);
+
+    // 确保数据长度不超过 CAN 最大数据长度
+    if (data_len &gt; 8) &#123;
+        data_len = 8; // CAN 数据长度最大为 8 字节
+    &#125;
+
+    // 创建 CAN 帧
+    struct can_frame frame;
+    frame.can_id = can_id;
+    frame.can_dlc = data_len;
+
+    // 将数据复制到 CAN 帧中
+    for (jsize i = 0; i &lt; data_len; i++) &#123;
+        frame.data[i] = pdata[i] &amp; 0xFF;
+    &#125;
+    // 将剩余的数据部分置为 0（如果数据长度小于 8）
+    for (jsize i = data_len; i &lt; 8; i++) &#123;
+        frame.data[i] = 0;
+    &#125;
+
+    // 释放 JNI 数据
+    env-&gt;ReleaseByteArrayElements(data, pdata, 0);
+
+    // 写入 CAN 总线
+    int ret = write(fd, &amp;frame, sizeof(struct can_frame));
+    return ret;
+&#125;
+
+extern &quot;C&quot;
+JNIEXPORT jobject JNICALL
+Java_com_example_myapplication_CanControl_CanRead(JNIEnv *env, jclass clazz,
+                                                  jobject mcanFrame, jint time) &#123;
+    struct can_frame frame;
+    read(time, &amp;frame, sizeof(struct can_frame));
+
+    jclass canFrameClass = env-&gt;GetObjectClass(mcanFrame);
+
+    jfieldID canIdField = env-&gt;GetFieldID(canFrameClass, &quot;can_id&quot;, &quot;I&quot;);
+    jfieldID canDlcField = env-&gt;GetFieldID(canFrameClass, &quot;can_dlc&quot;, &quot;C&quot;);
+    jfieldID dataField = env-&gt;GetFieldID(canFrameClass, &quot;data&quot;, &quot;[B&quot;);
+
+    env-&gt;SetIntField(mcanFrame, canIdField, static_cast&lt;jint&gt;(frame.can_id));
+    env-&gt;SetCharField(mcanFrame, canDlcField, frame.can_dlc);
+
+    jbyteArray dataArray = env-&gt;NewByteArray(frame.can_dlc);
+    env-&gt;SetByteArrayRegion(dataArray, 0, frame.can_dlc, (jbyte *)frame.data);
+    env-&gt;SetObjectField(mcanFrame, dataField, dataArray);
+
+    return mcanFrame;
+&#125;
+
+extern &quot;C&quot;
+JNIEXPORT int JNICALL
+Java_com_example_myapplication_CanControl_CloseCan(JNIEnv *env, jclass clazz, jint fd) &#123;
+    return close(fd);
+&#125;</code></pre>
+
+<h3 id="三、测试demo"><a href="#三、测试demo" class="headerlink" title="三、测试demo"></a>三、测试demo</h3><p>修改MainActivity.java文件</p>
+<pre><code class="highlight plaintext">package com.example.myapplication;
+
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
+import android.util.Log;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity &#123;
+
+    CanControl can0;
+    TextView tv;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) &#123;
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        tv = findViewById(R.id.textview0);
+        tv.setMovementMethod(ScrollingMovementMethod.getInstance());
+
+        can0 = new CanControl(this);
+        can0.InitCan(500000);
+        can0.fd = can0.OpenCan(&quot;can0&quot;);
+
+        //send
+        new Thread() &#123;
+            byte[] data = new byte[] &#123;(byte)0xA0, (byte)0xA1, (byte)0xA2, (byte)0xA3, (byte)0xA4, (byte)0xA5, (byte)0xA6, (byte)0xA7&#125;;
+
+            @Override
+            public void run() &#123;
+                while (true) &#123;
+                    try &#123;
+                        sleep(1000); // 每秒发送一次数据
+                    &#125; catch (InterruptedException e) &#123;
+                        e.printStackTrace();
+                    &#125;
+
+                    // 更新数据
+                    data[0] = (byte) ((data[0] + 1) % 0xFF);
+
+                    // 调用 CanWrite 方法发送数据
+                    int result = CanControl.CanWrite(can0.fd,0x123, data);
+                    if (result &lt; 0) &#123;
+                        // 发送失败，处理错误
+                        Log.e(&quot;CAN&quot;, &quot;发送数据失败&quot;);
+                    &#125; else &#123;
+                        // 发送成功
+                        Log.i(&quot;CAN&quot;, &quot;数据发送成功&quot;);
+                    &#125;
+                &#125;
+            &#125;
+        &#125;.start();
+
+
+        // Initialize CanFrame
+        final CanFrame[] canFrame = &#123;new CanFrame()&#125;;
+
+        //receive
+        new Thread() &#123;
+            @Override
+            public void run() &#123;
+                while (true) &#123;
+                    // Call the CanRead method
+                    canFrame[0] = CanControl.CanRead(canFrame[0], can0.fd);
+
+                    // Extract data from CanFrame
+                    int can0id = canFrame[0].can_id;
+                    int can0eff = (can0id &amp; 0x80000000) != 0 ? 1 : 0; // Extended frame
+                    int can0rtr = (can0id &amp; 0x40000000) != 0 ? 1 : 0; // Remote transmission request
+                    int can0len = canFrame[0].can_dlc;
+                    byte[] can0data = canFrame[0].data;
+
+                    runOnUiThread(() -&gt; &#123;
+                        // Prepare the string to display
+                        String str = &quot;can0  RX &quot;;
+                        str += (can0eff == 0) ? &quot;S &quot; : &quot;E &quot;;
+                        str += (can0rtr == 0) ? &quot;-  &quot; : &quot;R  &quot;;
+                        String strid = Integer.toHexString(can0id &amp; 0x1FFFFFFF); // Mask to get ID
+                        if (can0eff == 0) &#123;
+                            for (int i = 0; i &lt; 3 - strid.length(); i++) &#123;
+                                strid = &#x27;0&#x27; + strid;
+                            &#125;
+                        &#125; else &#123;
+                            for (int i = 0; i &lt; 8 - strid.length(); i++) &#123;
+                                strid = &#x27;0&#x27; + strid;
+                            &#125;
+                        &#125;
+                        str = str + strid + &quot;   [&quot; + can0len + &quot;]  &quot;;
+                        for (int i = 0; i &lt; can0len; i++) &#123;
+                            String hex = Integer.toHexString(can0data[i] &amp; 0xFF);
+                            hex = (hex.length() == 1) ? (&#x27;0&#x27; + hex) : hex;
+                            str = str + &#x27; &#x27; + hex;
+                        &#125;
+                        str = str.toUpperCase();
+                        str += &#x27;\n&#x27;;
+
+                        // Update the TextView
+                        if (tv.getLineCount() &gt; 1000) &#123;
+                            tv.setText(&quot;&quot;);
+                        &#125;
+                        tv.append(str);
+                        int offset = tv.getLineCount() * tv.getLineHeight();
+                        if (offset &gt; tv.getHeight()) &#123;
+                            tv.scrollTo(0, offset - tv.getHeight());
+                        &#125;
+                    &#125;);
+                &#125;
+            &#125;
+        &#125;.start();
+    &#125;
+&#125;
+</code></pre>
+
+<p>修改activity_main.xml文件</p>
+<pre><code class="highlight plaintext">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;androidx.constraintlayout.widget.ConstraintLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;
+    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+    android:id=&quot;@+id/main&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;match_parent&quot;
+    tools:context=&quot;.MainActivity&quot;&gt;
+
+    &lt;TextView
+        android:id=&quot;@+id/textview0&quot;
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:text=&quot;&quot;
+        app:layout_constraintBottom_toBottomOf=&quot;parent&quot;
+        app:layout_constraintEnd_toEndOf=&quot;parent&quot;
+        app:layout_constraintStart_toStartOf=&quot;parent&quot;
+        app:layout_constraintTop_toTopOf=&quot;parent&quot; /&gt;
+
+&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;</code></pre>
+
+<hr>
+<h3 id="四、验证"><a href="#四、验证" class="headerlink" title="四、验证"></a>四、验证</h3><p><img src="/2024/08/14/an-zhuo-can-kai-fa-li-cheng/1723534231566.png"></p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://mai-bk.com" rel="external nofollow noreferrer">Mai</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://mai-bk.com/2024/08/14/an-zhuo-can-kai-fa-li-cheng/">https://mai-bk.com/2024/08/14/an-zhuo-can-kai-fa-li-cheng/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://mai-bk.com" target="_blank">Mai</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
     </script>
 
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2024/08/14/an-zhuo-can-kai-fa-li-cheng/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="安卓can开发">
+                        
+                       
+                        <span class="card-title">安卓can开发</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Android CAN 应用开发在工作时发现我们很多客户对于Android can应用开发没有一点头绪，下面我通过一个简单项目来实现一个can通信demo。
+开发准备确保开发板硬件上有can节点存在，并且确保通信正常 验证方法如下：
+一 、
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-08-14
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Mai
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2024/08/01/1/">
+                    <div class="card-image">
+                        
+                        <img src="https://pic.downk.cc/item/5ec92e6ec2a9a83be54d38cd" class="responsive-img" alt="QT环境配置">
+                        
+                        <!-- 春节主题 小挂件 -->
+                        <div class="caishendeng"> 
+                            <div class="caishenxian">
+                                <!-- <img class="caishenpic lala" src="https://nekodeng.gitee.io/medias/spring-img/fudao.png">  -->
+                            </div> 
+                        </div>
+                        <span class="card-title">QT环境配置</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            ARM环境配置
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-08-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Mai/" class="post-category">
+                                    Mai
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/ARM%E5%BC%80%E5%8F%91%E6%9D%BF/">
+                        <span class="chip bg-color">ARM开发板</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        // if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+        //     newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+       // }
+
+       newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Mai-boko<br />'
+            + '文章作者: Mai<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+    <script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
     </div>
 </div>
 
-<style>
-    .bg-cover {
-        background-image: url("/medias/banner/ly.jpg") !important;
-        height: 63vh;
-    }
+<!-- TOC 悬浮按钮. -->
 
-    .bg-cover .container {
-        margin-top: 77px;
-    }
-
-    @media screen and (min-width: 762px) and (max-width: 1200px) {
-        .list:nth-last-of-type(1) {
-            margin-bottom: 10%;
-        }
-    }
-
-    @media only screen and (max-width: 760px) {
-        .list_nr {
-            max-height: auto !important;
-            width: 75% !important;
-        }
-
-        .list {
-            margin-bottom: 50%;
-        }
-
-        .list:nth-last-of-type(1) {
-            margin-bottom: 12%;
-        }
-    }
-
-    @media only screen and (max-width: 368px) {
-        .list {
-            margin-bottom: 60%;
-        }
-    }
-
-    @media only screen and (max-width: 900px) {
-        .miaoshus {
-            text-align: left;
-        }
-    }
-
-    @media only screen and (max-width: 292px) {
-        .list_nr {
-            max-height: auto !important;
-            width: 60% !important;
-        }
-
-        .list {
-            margin-bottom: 92%;
-        }
-
-        .list:nth-last-of-type(1) {
-            margin-bottom: 28%;
-        }
-    }
-
-    .card-content {
-        padding: 12px !important;
-        padding-bottom: 30px !important;
-    }
-
-    #switchchristmas {
-        bottom: 291px !important;
-    }
-
-    @media only screen and (max-width: 601px) {
-        #switchchristmas {
-            bottom: 235px !important;
-        }
-    }
-
-    .miaoshus {
-        padding: 12px;
-        border: 1px dashed #e6e6e6;
-        color: #969696;
-        position: relative;
-        display: inline-block;
-        width: 95%;
-        background: #fbfbfb50;
-        border-radius: 10px;
-        font-size: 16px;
-        margin: 12px auto;
-    }
-
-    body.dark .miaoshus {
-        background: 0 0;
-        border: 1px dashed #888;
-    }
-
-    .wrap p {
-        font-family: 'Architects Daughter', cursive !important;
-        font-size: 18px !important;
-        margin: 15px auto !important;
-    }
-
-    .im0now {
-        color: #e96900;
-        font-size: 20px !important;
-    }
-
-    .HotDate {
-        color: #e96900;
-        font-size: 26px;
-        font-weight: 400;
-        text-align: center;
-        margin: 10px auto;
-    }
-
-    .biaotis {
-        margin: 10px auto;
-        text-align: center;
-    }
-
-    .biaotis span {
-        font-family: 'Architects Daughter', cursive;
-        font-size: 19px;
-        margin: 15px auto;
-        padding-bottom: 6px;
-    }
-
-    body.dark .biaotis span {
-        color: rgba(255, 255, 255, 0.6);
-    }
-
-</style>
-<style>
-    /* 增加每日一言模块 */
-    .poem-wrap {
-        position: relative;
-        width: 730px;
-        max-width: 80%;
-        border: 2px solid #797979;
-        border-top: 0;
-        text-align: center;
-        margin: 30px auto 2px;
-    }
-
-    .poem-left {
-        left: 0;
-    }
-
-    .poem-border {
-        position: absolute;
-        height: 2px;
-        width: 27%;
-        background-color: #797979;
-    }
-
-    .poem-right {
-        right: 0;
-    }
-
-    .poem-wrap h1 {
-        position: relative;
-        margin-top: -20px;
-        display: inline-block;
-        letter-spacing: 4px;
-        color: #797979;
-    }
-
-    .poem-wrap p:nth-of-type(1) {
-        font-size: 25px;
-        text-align: center;
-        margin: 0 auto;
-    }
-
-    .poem-wrap p {
-        width: 70%;
-        margin: auto;
-        line-height: 30px;
-        color: #797979;
-        font-family: "Linux Biolinum", "Noto Serif SC", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
-    }
-
-    .poem-wrap p:nth-of-type(2) {
-        font-size: 18px;
-        margin: 15px auto;
-    }
-</style>
-
-<main class="content">
-    <div id="contact" class="container chip-container">
-        <div class="card">
-            <div class="card-content">
-                <div class="tag-title center-align">
-                    <i class="fas fa-comments"></i>&nbsp;&nbsp;留言板
-                    <div class="card-content">
-                        <!-- 加入网易云音乐热门评论，实时更新 -->
-                        <div class="poem-wrap">
-                            <div class="poem-border poem-left">
-                            </div>
-                            <div class="poem-border poem-right">
-                            </div>
-                            <h1>热评</h1>
-                            <p id="poem">loading...</p>
-                            <p id="info">loading...</p>
-                        </div>
-                        <script>
-                            $.get("https://v1.hitokoto.cn?c=d&c=h&c=j", function (data, status) {
-                                if (status == 'success') {
-                                    $('#poem').html(data.hitokoto);
-                                    if (data.from_who != null) {
-                                        $('#info').html(data.from_who + " · " + "《 " + data.from + " 》");
-                                    } else {
-                                        $('#info').html(" “ " + data.from + " ” ");
-                                    }
-                                } else {
-                                    $('#poem').html("获取出错啦");
-                                }
-                            });
-                        </script>
-                        <!-- 加入网易云音乐热门评论，实时更新 -->
-                    </div>
-                </div>
-                <h2 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h2><p>邮箱: <a href="mailto:&#49;&#54;&#x35;&#x34;&#x30;&#x31;&#54;&#55;&#54;&#56;&#x40;&#113;&#x71;&#46;&#99;&#111;&#109;">&#49;&#54;&#x35;&#x34;&#x30;&#x31;&#54;&#55;&#54;&#56;&#x40;&#113;&#x71;&#46;&#99;&#111;&#109;</a></p>
-<p>QQ: 1654016768</p>
-<p>微信: 1654016768</p>
-
-            </div>
-            <div class="music-player">
-                <div class="row">
-                    <div class="col s12 ">
-                        <meting-js style="margin-top: 1.5rem;width: auto;height: auto;"
-                                   server="netease"
-                                   type="song"
-                                   id="29803287"
-                                   order="list"
-                                   theme="#ad7a86"
-                                   loop="all"
-                                   autoplay="true"
-                                   storageName="aplayer-setting"
-                                   hideLrc="false"
-                        >
-                        </meting-js>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            
-
-            
-
-            
-
-            
-
-            
-        </div>
+    <div id="floating-toc-btn" class="hide-on-med-and-down">
+        <a class="btn-floating btn-large bg-color">
+            <i class="fas fa-list-ul"></i>
+        </a>
     </div>
+
+
+<script>
+    $(function () {
+        getScript("/libs/tocbot/tocbot.min.js", function () {
+            tocbot.init({
+                tocSelector: '#toc-content',
+                contentSelector: '#articleContent',
+                headingsOffset: -($(window).height() * 0.4 - 45),
+                collapseDepth: Number('0'),
+                headingSelector: 'h2, h3, h4'
+            });
+        })
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
 </main>
+
+
 </main>
 
 <style>
